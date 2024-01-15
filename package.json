@@ -18,6 +18,7 @@
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "framer-motion": "^10.18.0",
+    "prettier": "^3.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -37,7 +38,6 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^3.2.2",
     "typescript": "^5.3.3",
     "vite": "^5.0.11",
     "vite-tsconfig-paths": "^4.2.3"

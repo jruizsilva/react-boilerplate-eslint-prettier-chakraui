@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
+  plugins: ['react', '@typescript-eslint'],
   extends: [
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
@@ -13,11 +14,18 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'standard-with-typescript',
-    'prettier'
+    'prettier',
   ],
-  settings: { react: { version: 'detect' } },
-  overrides: [],
   parser: '@typescript-eslint/parser',
+  settings: {
+    react: { version: 'detect' }, 'import/resolver': {
+      node: {
+        paths: ['src'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    }
+  },
+  overrides: [],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -26,7 +34,6 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json'
   },
-  plugins: ['react', '@typescript-eslint'],
   root: true,
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -56,13 +63,5 @@ module.exports = {
         next: ['const', 'let', 'var']
       }
     ]
-  },
-  settings: {
-    'import/resolver': {
-      node: {
-        paths: ['src'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
-      }
-    }
   }
 }

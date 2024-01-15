@@ -3,6 +3,8 @@ import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
 import theme from './theme/theme'
 // clean the localstorage if the initial theme is not working
 export function App() {
+  const hola = ''
+
   return (
     <ChakraProvider>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
